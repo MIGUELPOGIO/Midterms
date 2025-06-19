@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('program')->comment('student acad track');
             $table->string('enrollment_year')->comment('year of student enrollment')->max(4);
             $table->datetime('birthday')->comment('student birthday');
+            $table->foreignId('course_id')->nullable()->constrained('class');
+
         });
     }
 

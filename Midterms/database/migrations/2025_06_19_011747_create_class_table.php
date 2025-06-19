@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('course_code')->comment('code of course')->max(10);
             $table->integer('credits')->comment('course credits');
             $table->string('description')->comment('course description');
+            $table->foreignId('student_id')->nullable()->constrained('students');
+
         });
     }
 
